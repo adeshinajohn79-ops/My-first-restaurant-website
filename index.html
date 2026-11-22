@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lugard Dishes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Literata:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#home">Lugard Dishes</a>
+    <nav aria-label="Main"><a href="#menu">Menu</a><a href="#finder">Find a dish</a><a href="#about">About</a><a href="#reserve">Reserve</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="view" id="home">
+    <div class="hero"><div class="ht">
+      <h1>Lugard Dishes</h1>
+      <p>Nigerian home cooking and fresh seafood, made to order. Soups, grills, stews and rice, with plenty of pepper.</p>
+      <a class="btn" href="#reserve">Reserve a table</a> <a class="btn alt" href="#menu">See the menu</a>
+    </div>
+    <div class="art"><svg viewBox='0 0 400 400' role='img' aria-label='A plate of jollof rice with fried plantain, prawn, lemon and pepper'><circle cx='200' cy='200' r='190' fill='#1b2a6b'/><circle cx='200' cy='200' r='168' fill='#fbf5ea'/><circle cx='200' cy='200' r='150' fill='none' stroke='#dccfb8' stroke-width='3'/><circle cx='165' cy='195' r='92' fill='#c93d14'/><circle cx='165' cy='190' r='78' fill='#dd5a1f'/><g fill='#f4a063'><ellipse cx='130' cy='160' rx='7' ry='3.5'/><ellipse cx='170' cy='140' rx='7' ry='3.5'/><ellipse cx='205' cy='170' rx='7' ry='3.5'/><ellipse cx='140' cy='200' rx='7' ry='3.5'/><ellipse cx='185' cy='215' rx='7' ry='3.5'/><ellipse cx='120' cy='230' rx='7' ry='3.5'/><ellipse cx='160' cy='245' rx='7' ry='3.5'/><ellipse cx='215' cy='225' rx='7' ry='3.5'/><ellipse cx='150' cy='175' rx='7' ry='3.5'/></g><g fill='#f2b632' stroke='#a8680f' stroke-width='3'><ellipse cx='292' cy='262' rx='40' ry='22' transform='rotate(-35 292 262)'/><ellipse cx='262' cy='305' rx='40' ry='22' transform='rotate(-8 262 305)'/><ellipse cx='222' cy='322' rx='34' ry='20' transform='rotate(12 222 322)'/></g><path d='M255 98q52-14 66 34q10 42-28 62' fill='none' stroke='#ef7a52' stroke-width='24' stroke-linecap='round'/><path d='M300 180l22 14M290 196l16 22' stroke='#c9471f' stroke-width='9' stroke-linecap='round'/><circle cx='262' cy='104' r='4' fill='#12283a'/><path d='M96 296a48 48 0 0 0 86 28z' fill='#f7e25a' stroke='#c9b324' stroke-width='3'/><ellipse cx='118' cy='122' rx='26' ry='12' fill='#3f8a3a' transform='rotate(-35 118 122)'/><circle cx='320' cy='235' r='8' fill='#c2371b'/><circle cx='336' cy='252' r='6' fill='#c2371b'/></svg></div>
+    </div>
+    <div class="band"></div>
+    <h2 class="s">Dishes to try</h2>
+    <div class="show" role="region" aria-roledescription="carousel" aria-label="Featured dishes" id="show">
+      <div class="track" id="track"></div>
+      <div class="ctl"><button type="button" id="prev" aria-label="Previous dish">‹</button><div class="dots" id="dots"></div><button type="button" id="next" aria-label="Next dish">›</button></div>
+    </div>
+    <h2 class="s">House favourites</h2>
+    <div class="picks3" id="fav"></div>
+    <div class="cards"><a href="#finder"><strong>Find a new dish</strong><span>Tell us your mood and we will pick for you.</span></a><a href="#about"><strong>Hours and our story</strong><span>When we open and how we cook.</span></a></div>
+    </div>
+
+    <div class="view" id="finder">
+    <div class="finder">
+      <h2>Find a new dish to try</h2>
+      <p>Tell us what you feel like and we will pick something from the menu. Not your thing? Ask again.</p>
+      <div class="picks">
+        <fieldset><legend>What kind of food?</legend><div class="chips" data-name="kind"></div></fieldset>
+        <fieldset><legend>How hot?</legend><div class="chips" data-name="heat"></div></fieldset>
+        <fieldset><legend>How hungry?</legend><div class="chips" data-name="size"></div></fieldset>
+      </div>
+      <button class="btn" type="button" id="pick">Find me a dish</button>
+      <div id="result" aria-live="polite"></div>
+    </div>
+    </div>
+
+    <div class="view" id="menu">
+    <section class="block">
+      <h2 class="s">Menu</h2>
+      <div class="tabs" role="tablist" aria-label="Menu sections"></div>
+      <div id="dishes"></div>
+    </section>
+    </div>
+
+    <div class="view" id="about">
+    <section class="block">
+      <h2 class="s">Our story</h2>
+      <p style="max-width:36rem">Lugard Dishes is a kitchen built around the food many of us grew up on: slow-cooked soups, charcoal grills, smoky jollof and fish straight from the water. Everything is cooked to order, with pepper on the side when you want it.</p>
+      <p style="max-width:36rem">Come hungry, share a few plates, and try something you have not had before. That is what the dish finder is for.</p>
+    </section>
+    <section class="block">
+      <div class="grid2">
+        <div><h2 class="s">Hours</h2><table id="hours"><tbody></tbody></table></div>
+        <div><h2 class="s">Contact</h2>
+          <p>Call or text <a href="tel:09073227096">0907 322 7096</a>.</p>
+          <p>Email <a href="mailto:adeshinajohn79@gmail.com">adeshinajohn79@gmail.com</a> for bookings, events and questions.</p>
+          <p>Please tell us about allergies when you order.</p></div>
+      </div>
+    </section>
+    </div>
+
+    <div class="view" id="reserve">
+    <section class="block">
+      <h2 class="s">Reserve a table</h2>
+      <p>Prefer to call? Reach us on <a href="tel:09073227096">0907 322 7096</a>.</p>
+      <form id="resForm" novalidate>
+        <label class="f">Name<input class="t" id="name" autocomplete="name"></label>
+        <label class="f">Phone number<input class="t" id="phone" type="tel" autocomplete="tel"></label>
+        <div class="row">
+          <label class="f">Date<input class="t" id="date" type="date"></label>
+          <label class="f">Time<select id="time"></select></label>
+        </div>
+        <label class="f">Party size<select id="party"></select></label>
+        <label class="f">Notes (dish you want to try, allergies, occasion)<textarea id="notes" rows="3"></textarea></label>
+        <button class="btn" type="submit">Send reservation by email</button>
+        <p id="msg" aria-live="polite"></p>
+      </form>
+    </section>
+    </div>
+  </main>
+
+  <footer>© Lugard Dishes. Call 0907 322 7096 or email adeshinajohn79@gmail.com to book.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
